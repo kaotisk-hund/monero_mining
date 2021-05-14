@@ -5,7 +5,8 @@ download(){
 	echo "Downloading..."
 	wget $(python3.8 ./lib/download-latest-asset.py $OWNER $PROG ) -O $PROG-latest.tar.gz
 	echo "Extracting..."
-	tar xvfz $PROG-latest.tar.gz
+	tar xvfz $PROG-latest.tar.gz && rm $PROG-latest.tar.gz
+	if [ ! -d "downloads" ]; then mkdir $PWD/downloads;fi
 	echo "Updating..."
 	export tag="$(curl --silent -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$OWNER/$PROG/releases/latest" | grep tag_name | cut -d '"' -f 4 | sed -e 's/v//')"
 	rm -rf downloads/$PROG-$tag
