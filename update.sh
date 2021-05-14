@@ -2,6 +2,6 @@
 echo "Monero mining reposotory syncing..."
 git pull
 echo "Refreshing xmrig..."
-sh miner-downloader.sh
+sh utils/updater.sh xmrig xmrig
 echo "Refreshing xmrig-proxy..."
-sh proxy-downloader.sh
+sh utils/updater.sh xmrig xmrig-proxy
