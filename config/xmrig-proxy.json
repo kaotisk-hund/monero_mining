@@ -1,0 +1,37 @@
+{
+    "access-log-file": "logs/access.log",
+    "algo": "cryptonight",
+    "api": {
+        "port": 8087,
+        "access-token": null,
+        "worker-id": "x",
+        "ipv6": true,
+        "restricted": true
+    },
+    "background": false,
+    "bind": [
+        "0.0.0.0:3333",
+	"[::]:3333"
+    ],
+    "colors": true,
+    "donate-level": 2,
+    "log-file": "logs/xmrig-proxy.log",
+    "mode": "simple",
+    "pools": [
+        {
+            "url": "xmrpool.eu:5555",
+            "user": "$ADDRESS",
+            "pass": "x",
+	    "coin": "monero",
+            "keepalive": true,
+            "variant": -1,
+            "tls": false,
+            "tls-fingerprint": null
+        }
+    ],
+    "retries": 2,
+    "retry-pause": 1,
+    "syslog": false,
+    "verbose": false,
+    "workers": "user"
+}
