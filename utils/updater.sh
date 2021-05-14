@@ -3,7 +3,7 @@ echo "Latest asset downloader"
 echo "-----------------------"
 download(){
 	echo "Downloading..."
-	wget $(python3 ./lib/download-latest-asset.py $OWNER $PROG ) -O $PROG-latest.tar.gz
+	wget  -nv --show-progress $(python3 ./lib/download-latest-asset.py $OWNER $PROG ) -O $PROG-latest.tar.gz
 	echo "Extracting..."
 	tar xvfz $PROG-latest.tar.gz
 	if [ ! -d "downloads" ]; then mkdir $PWD/downloads;fi
