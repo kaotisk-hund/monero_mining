@@ -5,5 +5,5 @@
 # The following makes sure that it will be restarted.
 
 for ((;;)); do
-	xmrig-proxy ;
+	xmrig ;
 done
