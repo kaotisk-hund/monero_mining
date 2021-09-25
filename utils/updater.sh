@@ -12,7 +12,7 @@ download(){
 	rm -rf downloads/$PROG-$tag
 	mv $PROG-$tag downloads/
 	echo "Linking..."
-	rm -rf $PROG-latest
+	rm -rf $PWD/downloads/$PROG-latest
 	ln -s $PWD/downloads/$PROG-$tag $PWD/downloads/$PROG-latest
 	echo "Cleaning..."
 	rm $PROG-latest.tar.gz
