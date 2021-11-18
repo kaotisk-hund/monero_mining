@@ -3,7 +3,7 @@ echo "Monero mining installer"
 echo "-----------------------"
 echo "Launching updater to get latest version of XMRig and XMRig proxy from github..."
 sh update.sh
-echo "Creating symlinks... (need root)"
+echo "Copying files to /usr/local/bin... (needs root, you 'll be asked for password)"
 sudo cp $PWD/downloads/xmrig-latest/xmrig /usr/local/bin/xmrig
 sudo cp $PWD/downloads/xmrig-proxy-latest/xmrig-proxy /usr/local/bin/xmrig-proxy
 sudo cp $PWD/tools/mine-looper.sh /usr/local/bin/monero-mining
