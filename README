@@ -1,0 +1,39 @@
+Monero mining
+=============
+
+Description
+-----------
+This code provided here, is for mining or proxying other miners, based on the XMR cryptocurrency. We use xmrig (https://github.com/xmrig/xmrig), install it to the system and we provide tools for quickly update your installation.
+
+You will need
+-------------
+- git,
+- python3,
+- screen and or tmux
+
+Usage
+-----
+1. Clone the repo
+2. Change dir to the cloned repo
+3. Run `sh install.sh`
+
+After completing this step you will need to configure your installation
+1. Run `sh configure.sh`
+
+Testing has been done
+---------------------
+Fedora 34/35
+
+Found an issue?
+---------------
+1. Tell me about it (issue an issue on github :D )
+2. You have a fix? Pull request me :)
+
+Further reading
+---------------
+Please see manual.pdf
+
+Donate
+------
+You can run `sh configure.sh --donate` to send the mined XMR to my proxy.
+
