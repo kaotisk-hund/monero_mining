@@ -3,7 +3,7 @@
 #
 export APP_NAME=$(basename $0)
 export LOGS=$PWD"/logs/mining"
-export XM_CONF=$PWD"/downloads/xmrig-latest/config.json"
+export XM_CONF=$HOME"/.xmrig.json"
 export XP_CONF=$PWD"/downloads/xmrig-proxy-latest/config.json"
 
 title(){

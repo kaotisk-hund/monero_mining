@@ -1,5 +1,6 @@
 #!/bin/bash
-REPO=$(PWD)
+REPO=$(pwd)
+echo $REPO
 echo "Monero mining installer"
 echo "-----------------------"
 echo "Launching updater to get latest version of XMRig and XMRig proxy from github..."
