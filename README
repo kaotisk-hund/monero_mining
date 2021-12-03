@@ -20,6 +20,12 @@ Usage
 After completing this step you will need to configure your installation
 1. Run `sh configure.sh`
 
+Using podman
+------------
+1. Clone the repo
+2. Run `podman.sh` script
+
+
 Testing has been done
 ---------------------
 Fedora 34/35
