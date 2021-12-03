@@ -1,0 +1,16 @@
+FROM fedora
+RUN sudo dnf install -y python3-requests git wget cmake gcc gcc-c++ libstdc++-devel libstdc++-static hwloc-devel openssl-devel libuv-devel glibc-static screen
+COPY . /
+#RUN sh /monero-mining/clone-patch-install.sh
+RUN git config --global user.email "you@example.com"
+RUN git config --global user.name "Your Name"
+
+RUN cd / && git clone https://github.com/xmrig/xmrig && cd xmrig && git am ../0001-my-though.patch && cmake . && make && cp xmrig /usr/bin/xmrig
+#RUN cp /monero-mining/xmrig/xmrig /usr/bin/xmrig
+RUN cd / && sh configure.sh --donate
+RUN cp /tools/mine-looper.sh /usr/bin/monero-mining
+RUN dnf clean all -y
+#RUN cd /
+#CMD ls
+#RUN sh /usr/bin/monero-mining
+ENTRYPOINT ["/play.sh"]
